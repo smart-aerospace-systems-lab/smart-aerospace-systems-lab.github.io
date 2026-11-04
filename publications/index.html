@@ -1,0 +1,25 @@
+---
+layout: page
+title: Publications
+lead: 논문, 학술대회 발표, 특허 목록입니다.
+---
+{%- assign type_names = "journal:Journal,conference:International Conference,domestic:국내 학술대회,patent:Patent" | split: "," -%}
+<div class="container container--narrow">
+  {%- assign by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+  {%- for y in by_year %}
+  <section class="pub-year">
+    <h2 class="pub-year__title">{{ y.name }}</h2>
+    <ol class="pub-list">
+      {%- for p in y.items %}
+      {%- assign type_label = p.type -%}
+      {%- for t in type_names -%}{%- assign kv = t | split: ":" -%}{%- if kv[0] == p.type -%}{%- assign type_label = kv[1] -%}{%- endif -%}{%- endfor %}
+      <li class="pub">
+        <p class="pub__type">{{ type_label }}</p>
+        <p class="pub__title">{% if p.link != "" %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+        <p class="pub__meta">{{ p.authors }}<br><em>{{ p.venue }}</em></p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
+  {%- endfor %}
+</div>

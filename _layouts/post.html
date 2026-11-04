@@ -1,24 +1,19 @@
 ---
 layout: default
+overlay_header: true
 ---
-
-{% include section.html background=page.image %}
-
-<h1 class="center">{{ page.title }}</h1>
-
-{%
-  include post-info.html
-  author=page.author
-  member=page.member
-  published=page.date
-  updated=page.last_modified_at
-  tags=page.tags
-%}
-
-{% include section.html %}
-
-{{ content }}
-
-{% include section.html %}
-
-{% include post-nav.html post=page %}
+<section class="page-hero page-hero--post">
+  <div class="container container--narrow">
+    <p class="page-hero__date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time></p>
+    <h1 class="page-hero__post-title">{{ page.title }}</h1>
+  </div>
+</section>
+<article class="page-body">
+  <div class="container container--narrow prose">
+    {%- if page.image and page.image != "" %}
+    <img class="post-cover" src="{{ page.image | relative_url }}" alt="">
+    {%- endif %}
+    {{ content }}
+    <p class="back-link"><a href="{{ '/news/' | relative_url }}">소식 목록으로</a></p>
+  </div>
+</article>

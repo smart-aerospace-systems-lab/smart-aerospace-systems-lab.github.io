@@ -1,0 +1,10 @@
+- id: professor
+  title: Professor
+- id: phd
+  title: Ph.D. Students
+- id: ms
+  title: M.S. Students
+- id: undergrad
+  title: Undergraduate Researchers
+- id: alumni
+  title: Alumni

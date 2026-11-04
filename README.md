@@ -1,35 +1,45 @@
-Visit **[smart-aerospace-systems-lab.github.io](https://smart-aerospace-systems-lab.github.io)** 🚀
+# Smart Aerospace Systems Laboratory 홈페이지
 
-Smart Aerospace Systems Laboratory
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17228741.svg)](https://doi.org/10.5281/zenodo.17228741)
+한국교통대학교 항공·기계설계공학과 Smart Aerospace Systems Laboratory 홈페이지입니다.
+주소: https://smart-aerospace-systems-lab.github.io
 
-<h1 align="center">Lab Website Template</h1>
-<p align="center">
-<img height="200" src="https://raw.githubusercontent.com/greenelab/lab-website-template/main/images/share.jpg?raw=true" alt="Lab Website Template">
-</p>
+`main` 브랜치에 push하면 GitHub Actions가 사이트를 빌드해서 `gh-pages` 브랜치로 배포합니다. 1~2분 뒤 반영됩니다.
 
-Lab Website Template (LWT) is an easy-to-use, flexible website template for labs.
-Spend less time worrying about managing a website and citations, and more time running your lab.
+## 내용 고치는 곳
 
-👇👇 **Get Started** 👇👇
+| 바꿀 내용 | 파일 |
+| --- | --- |
+| 연구실 이름, 이메일, 주소, 히어로 영상 | `_config.yml` |
+| 연구 분야 | `_data/research.yml` |
+| 연구 설비 | `_data/facilities.yml` |
+| 구성원 | `_data/members.yml` (사진은 `images/members/`) |
+| 논문·발표 | `_data/publications.yml` |
+| 소식(News) | `_posts/YYYY-MM-DD-제목.md` 파일 추가 |
+| 메뉴 | `_data/nav.yml` |
 
-[**Documentation**](https://greene-lab.gitbook.io/lab-website-template-docs)
+### 소식 올리기
 
-## Key Features
+`_posts/` 폴더에 `2026-11-20-conference.md` 같은 이름으로 파일을 만들고 아래처럼 씁니다.
 
-- 🤖 Based on Git, GitHub, and Jekyll.
-- 📜 Automatically generated citations from simple identifiers (DOI, PubMed, ORCID, and many more) using Manubot. E.g. `doi:1234/5678` -> `title`, `authors`, `publisher`, `date`, etc.
-- 🧱 A comprehensive and flexible suite of pre-made components (building blocks) for structuring and styling your website:
-  - Formatted tables, code blocks, figures, and other basic elements.
-  - Citations with thumbnails and other rich details.
-  - List large sets of data with flexible filters and components.
-  - ...many more
-- 👁️ Automatic pull request previews.
-- ⚙️ Easy and automated configuration.
-- 👥 Team member pages with bios, roles, and social media links.
-- 🖋️ Blog posts with tags and rich content.
-- 📱 Works and looks good on desktop and mobile.
-- 🤝 Great documentation and support (if we do say so ourselves).
-- ... and much more!
+```markdown
+---
+title: 국제학술대회 발표
+image: /images/news/conference.jpg   # 없으면 빈칸
+---
 
-![GitHub last commit](https://img.shields.io/github/last-commit/greenelab/lab-website-template)
+본문을 씁니다.
+```
+
+### 히어로 영상 넣기
+
+영상(mp4, 10MB 이하 권장)을 `images/hero.mp4`로 올리고 `_config.yml`에서
+`hero_video: /images/hero.mp4`로 바꿉니다. 영상이 없으면 풍동 유선 애니메이션이 나옵니다.
+
+## 로컬에서 미리 보기
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+http://localhost:4000 에서 확인합니다.

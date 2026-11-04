@@ -1,0 +1,6 @@
+{%- comment -%} 사진이 있으면 사진, 없으면 도면 패턴 {%- endcomment -%}
+<div class="media{% if include.image == nil or include.image == '' %} media--blank{% endif %}">
+  {%- if include.image and include.image != "" %}
+  <img src="{{ include.image | relative_url }}" alt="{{ include.alt }}" loading="lazy">
+  {%- endif %}
+</div>

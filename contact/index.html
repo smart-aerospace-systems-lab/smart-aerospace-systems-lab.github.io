@@ -1,0 +1,27 @@
+---
+layout: page
+title: Contact
+lead: 연구 협력, 입학 문의 모두 환영합니다.
+---
+<div class="container container--narrow">
+  <dl class="contact-list">
+    <div>
+      <dt>이메일</dt>
+      <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+    </div>
+    {%- if site.phone != "" %}
+    <div>
+      <dt>전화</dt>
+      <dd>{{ site.phone }}</dd>
+    </div>
+    {%- endif %}
+    <div>
+      <dt>주소</dt>
+      <dd>{{ site.address }}{% if site.room != "" %}<br>{{ site.room }}{% endif %}<br><a href="{{ site.map_url }}">지도에서 보기</a></dd>
+    </div>
+    <div>
+      <dt>소속</dt>
+      <dd>{{ site.university }} {{ site.department }}<br>{{ site.department_en }}, {{ site.university_en }}</dd>
+    </div>
+  </dl>
+</div>

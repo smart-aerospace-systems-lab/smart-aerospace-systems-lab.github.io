@@ -1,0 +1,23 @@
+---
+layout: page
+title: Research
+lead: 멀티로터가 고장에도 안전하게 비행하도록, 감지부터 시험까지 이어서 연구합니다.
+---
+<div class="container">
+  {%- for r in site.data.research %}
+  <section class="feature" id="{{ r.id }}">
+    {% include media.html image=r.image alt=r.title %}
+    <div class="feature__body">
+      <p class="feature__en">{{ r.title_en }}</p>
+      <h2 class="feature__title">{{ r.title }}</h2>
+      <p class="feature__summary">{{ r.summary }}</p>
+      <p>{{ r.detail }}</p>
+      {%- if r.keywords %}
+      <ul class="tags" aria-label="키워드">
+        {%- for k in r.keywords %}<li>{{ k }}</li>{%- endfor %}
+      </ul>
+      {%- endif %}
+    </div>
+  </section>
+  {%- endfor %}
+</div>

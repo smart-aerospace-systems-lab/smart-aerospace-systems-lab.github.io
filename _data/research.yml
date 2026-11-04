@@ -1,0 +1,27 @@
+# 연구 분야 목록. 홈과 Research 페이지에 순서대로 나옵니다.
+# image: images/research/ 폴더에 사진을 넣고 경로를 적으면 됩니다. 비워 두면 패턴이 나옵니다.
+# TODO: 설명 문구를 실제 연구 내용에 맞게 다듬어 주세요.
+
+- id: fault-detection
+  title_en: Motor Fault Detection
+  title: 멀티로터 모터 고장 진단
+  summary: 비행 중 모터 상개방(phase-open) 같은 고장을 빠르게 찾아내고, 남은 모터로 기체를 지키는 방법을 연구합니다.
+  detail: PX4 기반 멀티로터에서 모터·ESC 신호와 비행 데이터를 이용해 고장을 감지하고 분리합니다. 감지 결과를 고장 허용 제어(FTC)로 이어 실제 비행에서 검증합니다.
+  keywords: [PX4, 고장 감지·분리, 고장 허용 제어]
+  image: ""
+
+- id: hils
+  title_en: Hybrid HILS
+  title: 하이브리드 HILS
+  summary: 실제 하드웨어와 시뮬레이션을 하나의 루프로 묶어, 비행 전에 시스템을 안전하게 시험합니다.
+  detail: 비행 제어기와 추진계 등 실제 장비를 시뮬레이션 모델과 연결해 실시간으로 시험하는 하이브리드 HILS 환경을 구축합니다. 위험하거나 반복이 어려운 시나리오를 지상에서 재현합니다.
+  keywords: [Hardware-in-the-loop, 실시간 시뮬레이션]
+  image: ""
+
+- id: propulsion-testing
+  title_en: Propulsion Testing
+  title: 프로펠러·추진계 시험
+  summary: 추력 시험대와 풍동에서 프로펠러와 모터의 성능을 실제 비행 조건에 가깝게 측정합니다.
+  detail: 추력·토크·전력을 동시에 측정하는 시험대와, 로봇팔로 모터 자세를 재현하는 풍동 시험을 결합해 전진 비행과 기동 상태의 추진 성능을 데이터로 확보합니다.
+  keywords: [추력 시험, 풍동, 프로펠러 공력]
+  image: ""

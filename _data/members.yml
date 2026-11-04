@@ -1,0 +1,35 @@
+# 구성원. group 값: professor / phd / ms / undergrad / alumni
+# photo: images/members/ 에 사진을 넣고 경로를 적으세요. 비워 두면 이니셜이 나옵니다.
+# TODO: 아래는 예시입니다. 실제 구성원으로 바꿔 주세요.
+
+- name: 교수 이름
+  name_en: Professor Name
+  group: professor
+  role: 지도교수
+  email: professor@example.ac.kr
+  interests: 비행 제어, 고장 허용 시스템
+  photo: ""
+
+- name: 학생 이름
+  name_en: Student Name
+  group: ms
+  role: 석사과정
+  email: ""
+  interests: 멀티로터 고장 진단
+  photo: ""
+
+- name: 학생 이름
+  name_en: Student Name
+  group: ms
+  role: 석사과정
+  email: ""
+  interests: 하이브리드 HILS
+  photo: ""
+
+- name: 학생 이름
+  name_en: Student Name
+  group: undergrad
+  role: 학부연구생
+  email: ""
+  interests: 풍동·추력 시험
+  photo: ""

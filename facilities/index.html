@@ -1,0 +1,22 @@
+---
+layout: page
+title: Facilities
+lead: 추진계 성능을 직접 측정하고, 실제 장비로 비행을 미리 재현하는 시험 설비입니다.
+---
+<div class="container">
+  {%- for f in site.data.facilities %}
+  <section class="feature">
+    {% include media.html image=f.image alt=f.title %}
+    <div class="feature__body">
+      <p class="feature__en">{{ f.title_en }}</p>
+      <h2 class="feature__title">{{ f.title }}</h2>
+      <p>{{ f.summary }}</p>
+      <dl class="spec spec--wide">
+        {%- for s in f.specs %}
+        <div><dt>{{ s[0] }}</dt><dd>{{ s[1] }}</dd></div>
+        {%- endfor %}
+      </dl>
+    </div>
+  </section>
+  {%- endfor %}
+</div>
