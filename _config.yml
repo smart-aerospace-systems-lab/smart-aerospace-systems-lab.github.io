@@ -29,6 +29,8 @@ lang: ko
 
 permalink: /news/:year/:month/:day/:title/
 markdown: kramdown
+include:
+  - .nojekyll
 exclude:
   - README.md
   - Gemfile
