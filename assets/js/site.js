@@ -57,15 +57,24 @@
     var ctx = cv.getContext("2d");
     var W, H, dpr, cx, cy, R, U = 1, parts = [], raf = null;
 
+    /* 원기둥 자리에 연구실 로고 마크를 그립니다 (링 = 원기둥 경계) */
+    var mark = null;
+    if (cv.dataset.mark) {
+      mark = new Image();
+      mark.onload = function () { if (!running) drawStatic(); };
+      mark.src = cv.dataset.mark;
+    }
+    var RING_X = 0.5438, RING_Y = 0.5025, RING_R = 0.4767; /* 이미지 대비 링 중심·반지름 비율 */
+
     function resize() {
       dpr = Math.min(window.devicePixelRatio || 1, 2);
       W = cv.clientWidth; H = cv.clientHeight;
       cv.width = W * dpr; cv.height = H * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       var narrow = W < 700;
-      cx = W * (narrow ? 0.62 : 0.7);
-      cy = H * (narrow ? 0.36 : 0.42);
-      R = Math.min(W, H) * (narrow ? 0.18 : 0.17);
+      cx = W * (narrow ? 0.68 : 0.76);
+      cy = H * (narrow ? 0.27 : 0.42);
+      R = Math.min(W, H) * (narrow ? 0.22 : 0.19);
       var n = Math.min(900, Math.round((W * H) / 2600));
       parts = [];
       for (var i = 0; i < n; i++) parts.push(spawn(true));
@@ -107,9 +116,16 @@
     }
 
     function drawBody() {
-      ctx.strokeStyle = "rgba(255,255,255,0.07)";
-      ctx.lineWidth = 1;
-      ctx.beginPath(); ctx.arc(cx, cy, R - 1, 0, Math.PI * 2); ctx.stroke();
+      if (mark && mark.complete && mark.naturalWidth) {
+        var w = mark.naturalWidth, h = mark.naturalHeight, k = R / (RING_R * w);
+        ctx.fillStyle = "#0A0E14";
+        ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+        ctx.drawImage(mark, cx - RING_X * w * k, cy - RING_Y * h * k, w * k, h * k);
+      } else {
+        ctx.strokeStyle = "rgba(255,255,255,0.12)";
+        ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.arc(cx, cy, R - 1, 0, Math.PI * 2); ctx.stroke();
+      }
     }
 
     /* 움직임 줄이기 설정이면 유선을 한 번만 그립니다 */

@@ -1,8 +1,15 @@
 ---
 layout: page
 title: Research
-lead: 멀티로터가 고장에도 안전하게 비행하도록, 감지부터 시험까지 이어서 연구합니다.
+lead: 하이브리드 HILS, 조류 모방형 날갯짓 비행체, 스테레오 카메라 기반 UAM 감시 시스템. 세 분야를 연구합니다.
 ---
+<nav class="container jump" aria-label="연구 분야 바로가기">
+  <ul>
+    {%- for r in site.data.research %}
+    <li><a href="#{{ r.id }}"><span>{{ r.title_en }}</span>{{ r.title }}</a></li>
+    {%- endfor %}
+  </ul>
+</nav>
 <div class="container">
   {%- for r in site.data.research %}
   <section class="feature" id="{{ r.id }}">
@@ -12,10 +19,15 @@ lead: 멀티로터가 고장에도 안전하게 비행하도록, 감지부터 �
       <h2 class="feature__title">{{ r.title }}</h2>
       <p class="feature__summary">{{ r.summary }}</p>
       <p>{{ r.detail }}</p>
-      {%- if r.keywords %}
-      <ul class="tags" aria-label="키워드">
-        {%- for k in r.keywords %}<li>{{ k }}</li>{%- endfor %}
-      </ul>
+      {%- if r.topics and r.topics.size > 0 %}
+      <div class="subtopics">
+        {%- for t in r.topics %}
+        <div class="subtopic">
+          <h3 class="subtopic__title">{{ t.title }}</h3>
+          <p>{{ t.text }}</p>
+        </div>
+        {%- endfor %}
+      </div>
       {%- endif %}
     </div>
   </section>
