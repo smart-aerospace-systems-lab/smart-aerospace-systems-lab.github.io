@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Research | Smart Aerospace Systems Lab</title>
+<meta name="description" content="국립한국교통대학교 항공·기계설계학과 Smart Aerospace Systems Laboratory(SASL). 날갯짓 비행체, UAM 영상감시 시스템, 전기추진 시스템의 고장 진단을 연구합니다.">
+<meta property="og:title" content="Research | Smart Aerospace Systems Lab">
+<meta property="og:description" content="국립한국교통대학교 항공·기계설계학과 Smart Aerospace Systems Laboratory(SASL). 날갯짓 비행체, UAM 영상감시 시스템, 전기추진 시스템의 고장 진단을 연구합니다.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://smart-aerospace-systems-lab.github.io/images/logo/sasl-full.png">
+<meta property="og:url" content="https://smart-aerospace-systems-lab.github.io/research/">
+<meta name="theme-color" content="#0A1120">
+<link rel="canonical" href="https://smart-aerospace-systems-lab.github.io/research/">
+<link rel="alternate" hreflang="ko" href="https://smart-aerospace-systems-lab.github.io/research/">
+<link rel="alternate" hreflang="en" href="https://smart-aerospace-systems-lab.github.io/en/research/">
+<link rel="icon" href="/images/favicon.png" type="image/png">
+<script>
+  /* 테마: 저장된 선택 → 없으면 다크 */
+  (function () {
+    var t = "dark";
+    try { t = localStorage.getItem("sasl-theme") || "dark"; } catch (e) {}
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/assets/css/site.css?v=1794620537">
+
+</head>
+<body class="">
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<header class="site-header" data-header>
+  <div class="site-header__inner">
+    <div class="brand">
+      <a class="brand__lab" href="/" aria-label="Smart Aerospace Systems Laboratory 홈">
+        <img class="on-dark" src="/images/logo/sasl-mark-dark.png" alt="" width="30" height="30">
+        <img class="on-light" src="/images/logo/sasl-mark.png" alt="" width="30" height="30">
+        <span class="brand__text"><strong>SASL</strong><small>Smart Aerospace Systems Lab</small></span>
+      </a>
+    </div>
+    <nav class="site-nav" id="site-nav" aria-label="주 메뉴">
+      <ul>
+        <li><a href="/research/" aria-current="page">Research</a></li>
+        <li><a href="/members/">Members</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/facilities/">Facilities</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__tools">
+      <a class="lang-toggle" href="/en/research/" hreflang="en" lang="en" aria-label="English version">EN</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="밝은 화면으로 바꾸기">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">메뉴 열기</span>
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <h1 class="display page-hero__title">Research</h1>
+    <p class="page-hero__lead">날갯짓 비행체, UAM 영상감시 시스템, UAM 전기추진 분야의 연구를 소개합니다.</p>
+  </div>
+</section>
+<div class="page-body">
+<nav class="container jump" aria-label="연구 분야 바로가기">
+  <ul>
+    <li><a href="#flapping-wing"><span>Flapping-Wing Aerial Vehicle</span>조류 모방형 날갯짓 비행체</a></li>
+    <li><a href="#uam-surveillance"><span>Vision-based Surveillance System</span>영상 기반 UAM 감시 시스템</a></li>
+    <li><a href="#hybrid-hils"><span>UAM Electric Propulsion</span>UAM 전기추진 · 하이브리드 HILS</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <section class="feature" id="flapping-wing">
+    <div class="media">
+  <img src="/images/research/flapping-wing.jpg" alt="조류 모방형 날갯짓 비행체" loading="lazy">
+</div>
+
+    <div class="feature__body">
+      <p class="feature__en">Flapping-Wing Aerial Vehicle</p>
+      <h2 class="feature__title">조류 모방형 날갯짓 비행체</h2>
+      <p class="feature__summary">조류모방형 날갯짓 비행체의 구동 메커니즘과 날개 구조를 연구합니다. 기어트레인 설계와 다물체 동역학 해석을 통해 구동장치의 내구성을 평가하고, 날개 구조물의 유연성과 동특성에 따른 추력 및 양력 발생 성능을 실험으로 분석합니다.</p>
+      <p>날개폭 1.5 m 안팎의 꼬리날개형 날갯짓 비행체를 직접 설계·제작합니다. 지상 시험 장치에서 추력·양력·소비전력을 측정해 날개 구조물의 동특성과 추진 성능의 관계를 분석하고, 비행 중 날갯짓 상태를 계측해 활공 비행과 비행 제어에 활용합니다. 위장성이 높아 감시·정찰, 공항·과수원의 조류 퇴치 등에 활용할 수 있습니다.</p>
+      <ul class="tags" aria-label="연구 분야"><li>Structural Dynamics</li><li>Kinematic Design</li><li>Flight Control System</li>
+      </ul>
+      <p class="feature__project"><span>관련 프로젝트</span>생체모방형 무인이동체 구조 기술 개발</p>
+    </div>
+    <div class="subtopics subtopics--wide">
+      <div class="subtopic">
+        <h3 class="subtopic__title">활공 비행을 위한 홀 센서 적용 및 비행 성능 평가</h3>
+        <p>홀 센서와 전류 센서를 보정해 날개 위치와 모터 부하를 함께 계측하고, 앙상블 평균과 FFT로 잡음을 줄여 상승·하강 행정의 부하 차이를 비교합니다. 날개 구조물의 동특성에 따라 활공이 가능한지 확인합니다.</p>
+      </div>
+      <div class="subtopic">
+        <h3 class="subtopic__title">날개 동특성에 따른 추력 성능</h3>
+        <p>강성이 다른 세 가지 날개의 고유진동수를 충격 시험과 FFT로 구하고, 모터 전류와 회전수로 토크를 추정해 추력과 에너지 효율을 비교합니다. 저출력 구간에서 날갯짓이 프로펠러보다 에너지 효율이 높았습니다.</p>
+      </div>
+      <div class="subtopic">
+        <h3 class="subtopic__title">모션 캡처 카메라를 이용한 경량 구조물 모드 해석</h3>
+        <p>가속도계의 질량 효과를 피하기 위해 모션 캡처 카메라로 비접촉 모드 해석을 수행합니다. 1차 모드에서 Ansys 유한요소해석과 잘 일치했고, 천을 씌운 날개의 5–8 Hz 날갯짓 대역에서도 적용했습니다.</p>
+      </div>
+    </div>
+  </section>
+  <section class="feature" id="uam-surveillance">
+    <div class="media">
+  <img src="/images/research/uam-surveillance.jpg" alt="영상 기반 UAM 감시 시스템" loading="lazy">
+</div>
+
+    <div class="feature__body">
+      <p class="feature__en">Vision-based Surveillance System</p>
+      <h2 class="feature__title">영상 기반 UAM 감시 시스템</h2>
+      <p class="feature__summary">버티포트에 이착륙하는 UAM 기체의 위치를 측정하고 감시하는 시스템을 연구합니다. UWB와 LiDAR를 융합한 보조 측위 시스템, 스테레오 카메라 기반 최종접근 경로 감시 시스템을 구축하고, 하강풍에 의한 구조물 진동이 측정 정확도에 미치는 영향을 분석합니다.</p>
+      <p>고층 건물이 많은 도심에서는 GNSS나 전파 기반 항행시설만으로 이착륙 감시가 어려울 수 있습니다. 두 대의 카메라 영상으로 기체의 3차원 위치를 계산하는 스테레오 비전 시스템과 UWB-LiDAR 융합 보조 측위 시스템을 개발하고, ROS2·Gazebo 시뮬레이션과 모션 캡처 기준 데이터로 성능을 검증합니다.</p>
+      <ul class="tags" aria-label="연구 분야"><li>Ground Guidance System</li><li>System Integration</li><li>Computer Vision</li>
+      </ul>
+      <p class="feature__project"><span>관련 프로젝트</span>이동식 모듈형 버티포트 설계·시공 기술 및 감시시스템 개발</p>
+    </div>
+    <div class="subtopics subtopics--wide">
+      <div class="subtopic">
+        <h3 class="subtopic__title">스테레오 카메라 기반 버티포트 접근 경로 깊이 추정</h3>
+        <p>좌·우 카메라의 내부 파라미터와 상대 위치를 고려한 스테레오 모델을 구성하고, CNN 기반 객체 인식으로 찾은 표적 중심점을 삼각측량해 3차원 위치와 거리를 추정합니다. ROS2와 Gazebo로 버티포트 접근 상황을 모사해 성능을 검증합니다.</p>
+      </div>
+      <div class="subtopic">
+        <h3 class="subtopic__title">하강풍에 의한 버티포트 구조 진동의 영향</h3>
+        <p>eVTOL 로터의 가진 주파수로 모듈형 버티포트에 생기는 변위와 자세각을 유한요소해석으로 분석하고, 진동이 가장 작은 카메라 설치 위치를 찾아 위치 측정 신뢰성을 확보합니다.</p>
+      </div>
+      <div class="subtopic">
+        <h3 class="subtopic__title">UWB-LiDAR 융합 보조 측위</h3>
+        <p>잡음에 강한 UWB 측위에 LiDAR 포인트 클라우드를 K-Means 군집화로 융합해 정확도를 높이고, PX4 비행 제어와 연동하는 방안을 연구합니다.</p>
+      </div>
+    </div>
+  </section>
+  <section class="feature" id="hybrid-hils">
+    <div class="media">
+  <img src="/images/research/hybrid-hils.jpg" alt="UAM 전기추진 · 하이브리드 HILS" loading="lazy">
+</div>
+
+    <div class="feature__body">
+      <p class="feature__en">UAM Electric Propulsion</p>
+      <h2 class="feature__title">UAM 전기추진 · 하이브리드 HILS</h2>
+      <p class="feature__summary">멀티콥터 및 eVTOL용 분산 전기추진 시스템의 시험평가와 고장 진단을 연구합니다. 로터 블레이드 손상이 추진 성능에 미치는 영향을 시험하고, 소음 신호를 이용한 손상 진단 기법을 개발합니다. 아이언버드와 하이브리드 HILS를 이용해 비행 중 위험 상황을 지상에서 모사하는 시험 환경을 구축하고 있습니다.</p>
+      <p>실제 추진 하드웨어와 가상 추진 모델을 결합한 하이브리드 HILS(아이언버드형) 시험 환경을 구축하고, 프로펠러 파손·센서 이상 같은 고장을 주입해 추력, 토크, 전류, 전압, 회전속도 데이터를 확보합니다. 이 데이터로 이상 상황을 판단·추론하는 항전 소프트웨어 모델의 학습 기반을 만듭니다.</p>
+      <ul class="tags" aria-label="연구 분야"><li>Electric Propulsion System Monitoring</li><li>Rotor Aerodynamics</li><li>Structural Interaction</li>
+      </ul>
+      <p class="feature__project"><span>관련 프로젝트</span>도심항공교통의 비정상 상황 인지 및 대응을 위한 온보드 기반 지능형 항전 SW 플랫폼 기술 개발 및 실증</p>
+    </div>
+    <div class="subtopics subtopics--wide">
+      <div class="subtopic">
+        <h3 class="subtopic__title">로터 블레이드 파손에 따른 전기추진 시스템 특성 변화</h3>
+        <p>블레이드 손상을 모사하는 실험 장치로 손상 유형별 추력·토크·전류 신호의 패턴 변화를 정량 분석해, 이상 상황 탐지 알고리즘의 특징을 찾고 기초 데이터를 구축합니다.</p>
+      </div>
+      <div class="subtopic">
+        <h3 class="subtopic__title">하이브리드 HILS 고장 주입 시험</h3>
+        <p>실시간 시뮬레이션으로 기체 동역학과 추진계를 계산하면서 실제 추진 장비에 고장을 주입하는 시험 환경을 설계하고, UAM/eVTOL 지상 시험 사례를 비교 분석합니다.</p>
+      </div>
+      <div class="subtopic">
+        <h3 class="subtopic__title">eVTOL 추진계 지상 시험과 음향 진단</h3>
+        <p>아이언버드로 옥상 버티포트의 부분 지면효과와 로터 지지구조물 간섭을 시험하고, 저가형 마이크로폰·AR 글라스의 음향 신호로 프로펠러 손상을 진단할 수 있는지 검증합니다.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__id">
+      <img class="on-dark" src="/images/logo/sasl-mark-dark.png" alt="" width="40" height="39" loading="lazy">
+      <img class="on-light" src="/images/logo/sasl-mark.png" alt="" width="40" height="39" loading="lazy">
+      <div>
+        <p class="site-footer__name">Smart Aerospace Systems Laboratory</p>
+        <p class="site-footer__sub">국립한국교통대학교 항공·기계설계학과<br>Dept. of Aeronautical & Mechanical Design Engineering, Korea National University of Transportation</p>
+      </div>
+    </div>
+    <ul class="site-footer__nav"><li><a href="/research/">Research</a></li><li><a href="/members/">Members</a></li><li><a href="/publications/">Publications</a></li><li><a href="/projects/">Projects</a></li><li><a href="/facilities/">Facilities</a></li><li><a href="/contact/">Contact</a></li>
+    </ul>
+    <div class="site-footer__contact">
+      <p>충청북도 충주시 대학로 50 국립한국교통대학교<br>시스템관(E4) 209호</p>
+      <p>Professor <a href="mailto:dklee@ut.ac.kr">dklee@ut.ac.kr</a><br>043-841-5372</p>
+      <p>Lab Assistant <a href="mailto:tyg0876@ut.ac.kr">tyg0876@ut.ac.kr</a></p>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>© 2026 Smart Aerospace Systems Laboratory</p>
+    <a class="site-footer__univ" href="https://www.ut.ac.kr" aria-label="국립한국교통대학교 홈페이지">
+        <img class="on-dark" src="/images/logo/knut-full-white.png" alt="국립한국교통대학교" width="148" height="32" loading="lazy">
+        <img class="on-light" src="/images/logo/knut-full.png" alt="국립한국교통대학교" width="148" height="32" loading="lazy">
+      </a>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js?v=1794620537" defer></script>
+</body>
+</html>
